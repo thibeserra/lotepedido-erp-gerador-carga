@@ -37,7 +37,7 @@ public class PedidoSkuController {
 		List<PedidoSku> mockList = new ArrayList<>();
 		try {
 			// inclui 10 sku's em cada pedido
-			for (Long i = 0l; i < 10l; i++) { // pedido
+			for (Long i = 0l; i < 100l; i++) { // pedido
 				for(Long k = 0l; k < 10l; k++) { // sku
 					PedidoSku pedidoSku = new PedidoSku();
 					pedidoSku.setPedidoId(i+1);

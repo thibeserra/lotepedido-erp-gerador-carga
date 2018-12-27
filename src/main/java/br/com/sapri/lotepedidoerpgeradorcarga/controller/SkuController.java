@@ -37,12 +37,13 @@ public class SkuController {
 		List<Sku> mockList = new ArrayList<>();
 		try {
 			// inclui 10 sku's para cada produto
-			for(Long i = 0l; i < 10l; i++) {
+			for(Long i = 0l; i < 100l; i++) {
 				for (Long k = 0l; k < 10l; k++) {
 					Sku sku = new Sku();
 					sku.setNumero(i * 2);
 					sku.setCodigoBarras(i+1 * 11);
 					sku.setProdutoId(i+1);
+					sku.setPedidoId(i+1);
 					mockList.add(sku);
 				}				
 			}

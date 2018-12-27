@@ -36,7 +36,7 @@ public class ProdutoController {
 	ResponseEntity<List<Produto>> mock() {
 		List<Produto> mockList = new ArrayList<>();
 		try {
-			for (Long i = 0l; i < 10l; i++) {
+			for (Long i = 0l; i < 100l; i++) {
 				Produto produto = new Produto();
 				produto.setNumero(i * 2);
 				produto.setDescricao("Produto Mock " + i+1);

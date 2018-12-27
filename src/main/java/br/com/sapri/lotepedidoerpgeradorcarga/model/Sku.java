@@ -26,6 +26,9 @@ public class Sku implements Serializable{
 	
 	@Column(name = "produto_id")
 	private Long produtoId;
+	
+	@Column(name = "pedido_id")
+	private Long pedidoId;
 
 	public Long getId() {
 		return id;
@@ -59,10 +62,18 @@ public class Sku implements Serializable{
 		this.produtoId = produtoId;
 	}
 
+	public Long getPedidoId() {
+		return pedidoId;
+	}
+
+	public void setPedidoId(Long pedidoId) {
+		this.pedidoId = pedidoId;
+	}
+
 	@Override
 	public String toString() {
 		return "Sku [id=" + id + ", numero=" + numero + ", codigoBarras=" + codigoBarras + ", produtoId=" + produtoId
-				+ "]";
+				+ ", pedidoId=" + pedidoId + "]";
 	}
 
 	@Override
@@ -72,6 +83,7 @@ public class Sku implements Serializable{
 		result = prime * result + ((codigoBarras == null) ? 0 : codigoBarras.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((numero == null) ? 0 : numero.hashCode());
+		result = prime * result + ((pedidoId == null) ? 0 : pedidoId.hashCode());
 		result = prime * result + ((produtoId == null) ? 0 : produtoId.hashCode());
 		return result;
 	}
@@ -99,6 +111,11 @@ public class Sku implements Serializable{
 			if (other.numero != null)
 				return false;
 		} else if (!numero.equals(other.numero))
+			return false;
+		if (pedidoId == null) {
+			if (other.pedidoId != null)
+				return false;
+		} else if (!pedidoId.equals(other.pedidoId))
 			return false;
 		if (produtoId == null) {
 			if (other.produtoId != null)

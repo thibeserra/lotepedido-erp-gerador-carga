@@ -72,10 +72,10 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>5.1.4</version>
 				<configuration>
-					<url>jdbc:mysql://localhost:3306/gerador_carga?useSSL=false</url>
+					<url>jdbc:mysql://localhost:3306/erp?useSSL=false</url>
 					<driver>com.mysql.jdbc.Driver</driver>
 					<user>root</user>
-					<password>thiago</password>
+					<password>123</password>
 				</configuration>
 			</plugin>
 		</plugins>
